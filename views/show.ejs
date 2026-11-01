@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=post.username%>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Post Details here:</h3>
+        <div class="post-container">
+            <h3 class="heading">@
+                <%=post.username%>
+            </h3>
+            <p class="content">
+                <%=post.content  %>
+            </p>
+            <form action="/posts/<%=post.id%>/edit" method="GET">
+                <button class="Add-post">Edit</button>
+            </form>
+            <form action="/posts/<%=post.id%>?_method=DELETE" method="POST">
+                <button class="Add-post">Delete</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

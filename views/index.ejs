@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Quora Post</h1>
+    <div class="container">
+        <% posts.forEach((post)=>{ %>
+            <div class="post-container">
+                <h3 class="heading">@
+                    <%=post.username%>
+                </h3>
+                <p class="content">
+                    <%=post.content  %>
+                </p>
+                <div class="button-container">
+                    <div class="button"><button class="show"><a href="/posts/<%=post.id%>">Show Post</a></button></div>
+
+                </div>
+            </div>
+
+            <% }) %>
+    </div>
+    <form action="/posts/new" method="GET">
+        <button class="Add-post">Add New Post</button>
+    </form>
+</body>
+
+</html>

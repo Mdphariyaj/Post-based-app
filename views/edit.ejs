@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <form action="/posts/<%=post.id%>?_method=PATCH" method="POST" class="post-form">
+        <div class="Form">
+            <label for="user">Username:-</label>
+            <input type="text" name="username" id="user" placeholder="Enter username " value="<%=post.username%>">
+        </div>
+        <div class="Form">
+            <label for="content">Content:-</label>
+
+            <textarea name="content" id="content" placeholder="Enter message here" rows="10" cols="20" value="<%=post.content%>"><%=post.content%></textarea>
+        </div>
+        <button class="Add-post">Submit</button>
+
+    </form>
+</body>
+
+</html>
